@@ -1,0 +1,11 @@
+[
+  {
+    "id": 1,
+    "username": "username",
+    "password": "password",
+    "token": "",
+    "state": "not-asigned",
+    "patient": "Moi",
+    "terminal": 123456
+  }
+]
