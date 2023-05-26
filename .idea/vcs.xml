@@ -2,5 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/AppWeb Terminal Config/Moises_MunozSanchez_Terminal_y_UCR" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/AppWeb de Configuración/Moises_MunozSanchez_Terminal_y_UCR" vcs="Git" />
   </component>
 </project>
