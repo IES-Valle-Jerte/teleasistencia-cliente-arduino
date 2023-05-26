@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-md-6 p-0 pr-4 pl-4 p-sm-2">
+      <table>
+        <td>
+          <tr>API-REST:</tr>
+          <tr>Usuario del servicio:</tr>
+          <tr>Terminal:</tr>
+        </td>
+        <td>
+          <tr>{{this.bbddCredentials ? this.bbddCredentials[0].patient : ''}}
+            <div class="dotSpinner"  [ngClass]="this.bbddCredentials ? 'd-none' : ''">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </tr>
+          <tr>{{this.bbddCredentials ? this.bbddCredentials[0].patient : ''}}
+            <div class="dotSpinner"  [ngClass]="this.bbddCredentials ? 'd-none' : ''">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </tr>
+          <tr>{{this.bbddCredentials ? this.bbddCredentials[0].terminal : ''}}
+            <div class="dotSpinner"  [ngClass]="this.bbddCredentials ? 'd-none' : ''">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </tr>
+        </td>
+      </table>
+    </div>
+    <div class="col-12 col-md-6 p-0 p-sm-2 pt-4">
+      <p class=" text-center text-md-right">Estado de la conexión:
+        <span [ngClass]="webSocketStatusBool? 'conecctionStatusConnected':'conecctionStatusDisconnected'" class="ml-4">{{this.websocketStatusText}}
+          <i [ngClass]="webSocketStatusBool? 'spinWebsocketConnected':'spinWebsocketDisconnected'" class="ml-2 fa-solid fa-circle-nodes"></i>
+        </span>
+      </p>
+      <!--La conexión estará establecida cuando se detecte el servidor SOCKET.IO de la RASPBERRY-->
+    </div>
+  </div>
+  <div class="row dispositiveRow">
+    <div class="col-12 p-0 d-flex justify-content-center align-items-center pt-4">
+      <div class="dispositive" [ngClass]="webSocketStatusBool? 'dispositiveConnected':'dispositiveDisconnected'">
+        <img src="assets/dots.png">
+        <div [ngClass]="this.button2Status? 'cancelActive' : ''" id="cancel"></div>
+        <div [ngClass]="this.button1Status? 'emergencyActive' : ''" id="emergency"></div>
+      </div>
+    </div>
+  </div>
+</div>
