@@ -1,0 +1,16 @@
+[
+  {
+    "name": "El Torno",
+    "lat": "40.13574566123074",
+    "long": "-5.944696325637326",
+    "id": 1,
+    "imagen": "/assets/167102432321020190707_140329.jpg"
+  },
+  {
+    "name": "Cabezabellosa",
+    "lat": "40.13761747082106",
+    "long": "-6.37457881446697",
+    "imagen": "/assets/16747526284341200px-PanorÃ¡mica_de_Cabezabellosa",
+    "id": 2
+  }
+]

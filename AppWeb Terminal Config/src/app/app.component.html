@@ -1,0 +1,30 @@
+<div class="containerBox">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class=" navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item col-xs-3">
+          <a class="nav-link" [ngClass]="disableNav ? 'disabled' : ''" routerLink="/estado" [routerLinkActive]="['active']">
+            <span class="d-none d-sm-block">Estado</span>
+            <i class="d-block d-sm-none fa-solid fa-circle-nodes"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex align-items-center justify-content-center" [ngClass]="disableNav ? 'disabled' : ''" routerLink="/config" [routerLinkActive]="['active']">
+            <span class="d-none d-sm-block">Configuración</span>
+            <i class="d-block d-sm-none fa-sharp fa-solid fa-gear"></i>
+          </a>
+        </li>
+        <li class="nav-item logout">
+          <a class="nav-link" [ngClass]="disableNav ? 'disabled d-none' : ''" routerLink="/login" (click)="logout()">
+            <span class="d-none d-sm-block">Logout</span>
+            <i class="d-block d-sm-none fa-sharp fa-solid fa-right-from-bracket"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <router-outlet></router-outlet>
+</div>
+
+
+

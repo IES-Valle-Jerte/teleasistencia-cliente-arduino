@@ -1,0 +1,246 @@
+*
+{
+
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 1vw;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  border-top: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
+}
+
+table td:nth-of-type(2) tr
+{
+  text-align: center;
+}
+
+table td:nth-of-type(2)
+{
+  border-left: 1px solid lightgrey;
+  color: #1e90ff;
+  font-weight: bolder;
+}
+
+table td:nth-of-type(2)
+{
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.conecctionStatus
+{
+  margin-left: 1vw;
+}
+
+
+.dispositive
+{
+  transition: 400ms;
+  width: 400px;
+  height: 400px;
+  background-color: #f8f8f8;
+  border-radius: 80px 80px 280px 280px;
+  display: grid;
+  grid-template-rows: max-content 35% auto;
+  box-shadow: 0px 4px 23px -8px rgba(10, 10, 10, 0.75);
+}
+
+.dispositive img
+{
+  width: 100px;
+  align-self: flex-start;
+  justify-self: center;
+  margin-top: 20px;
+  opacity: 0.4;
+}
+
+.dispositive #cancel
+{
+  transition: 200ms;
+  width: 50px;
+  height: 50px;
+  border: 0;
+  border-radius: 100%;
+  justify-self: end;
+  margin-right: 120px;
+  align-self: flex-end;
+  background-color: rgb(212, 212, 212);
+}
+
+.dispositive #emergency
+{
+  transition: 200ms;
+  width: 90px;
+  height: 90px;
+  border: 0;
+  border-radius: 100%;
+  justify-self: center;
+  background-color: rgb(235, 235, 235);
+}
+
+.dispositive .emergencyActive
+{
+  transition: 200ms;
+  background-color: rgb(255, 81, 81) !important;
+  transform: scale(95%);
+}
+
+
+.dispositive .cancelActive
+{
+  transition: 200ms;
+  background-color: rgb(132, 211, 112) !important;
+  transform: scale(95%);
+}
+
+
+//-----CONEXION WEBSOCKET ANIMACION
+
+.conecctionStatusDisconnected
+{
+  transition: 400ms;
+  animation: spinText 2s infinite linear;
+}
+
+.conecctionStatusConnected
+{
+  transition: 400ms;
+  color: #1e90ff;
+}
+
+.fa-circle-nodes
+{
+  transition: 400ms;
+}
+
+.spinWebsocketDisconnected
+{
+  transition: 400ms;
+  animation: spin 2s infinite linear;
+}
+
+.spinWebsocketConnected
+{
+  transition: 400ms;
+  color: #1e90ff;
+}
+
+.dispositiveDisconnected
+{
+  transition: 400ms;
+  transform: scale(90%);
+  opacity: 0.2;
+}
+
+@keyframes spinText {
+  0% {
+    transition: 400ms;
+    opacity: 1;
+  }
+  50%
+  {
+    transition: 400ms;
+    opacity: 0.4;
+  }
+  100% {
+    transition: 400ms;
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transition: 400ms;
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  50%
+  {
+    transition: 400ms;
+    opacity: 0.4;
+  }
+  100% {
+    transition: 400ms;
+    transform: rotate(359deg);
+    opacity: 1;
+  }
+}
+
+//--SPINNERS
+
+.dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 15px;
+  margin: 2px;
+  background-color: grey;
+}
+
+
+.dotSpinner .dot:nth-last-child(1) {
+  animation: fallingAnimation 2s 0.3s linear infinite;
+}
+.dotSpinner .dot:nth-last-child(2) {
+  animation: fallingAnimation 2s 0.2s linear infinite;
+}
+.dotSpinner .dot:nth-last-child(3) {
+  animation: fallingAnimation 2s 0.1s linear infinite;
+}
+
+@keyframes fallingAnimation {
+  0% {
+    transform: translate(0,-6px);
+    opacity:0;
+  }
+  25%, 50%, 75% {
+    transform: translate(0,0);
+    opacity:1;
+  }
+  100% {
+    transform: translate(0,6px);
+    opacity:0;
+
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  *
+  {
+    font-size: 4vw;
+  }
+
+  .table
+  {
+    width: 100vw;
+  }
+
+  .dot
+  {
+    width: 1vw;
+    height: 1vw;
+  }
+
+  .dispositive
+  {
+    transform: scale(60%);
+    height: 380px;
+    width: 100vw;
+  }
+  .dispositive #cancel, .dispositive #emergency
+  {
+    transform: scale(70%);
+  }
+
+  .dispositiveRow
+  {
+    width: 100vw;
+  }
+
+}

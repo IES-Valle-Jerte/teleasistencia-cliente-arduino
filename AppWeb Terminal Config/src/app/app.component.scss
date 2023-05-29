@@ -1,0 +1,78 @@
+.containerBox
+{
+  height: 100vh;
+  display: grid;
+  grid-template-rows: max-content auto;
+}
+
+.nav
+{
+  width: 100%;
+}
+
+.navbar-nav
+{
+  width: 100%;
+  display: grid;
+  grid-template-columns: max-content max-content auto;
+}
+
+.navbar-nav .logout
+{
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+a
+{
+  transition: 200ms;
+  text-decoration: none;
+  //background-color: #84bfff;
+  background-color: lightgrey;
+  color: white !important;
+  margin: 4px;
+  padding: 14px !important;
+  width: max-content;
+}
+
+.active
+{
+  transition: 200ms;
+  background-color: dodgerblue !important;
+}
+
+a:hover
+{
+  transition: 200ms;
+  background-color: dodgerblue;
+}
+
+a.disabled
+{
+  background-color: lightgrey;
+}
+
+router-outlet
+{
+  //border: 2px solid lime;
+}
+
+.logoutOff
+{
+  display: none !important;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .navbar-nav
+  {
+    display: grid;
+    grid-template-columns: max-content max-content auto;
+  }
+  .navbar
+  {
+    width: 100vw;
+    padding: 10px !important;
+  }
+}
